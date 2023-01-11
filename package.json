@@ -1,13 +1,13 @@
 {
-  "name": "rollup-plugin-polyfill-node",
-  "version": "0.11.0",
+  "name": "@immersiv/rollup-plugin-polyfill-node",
+  "version": "0.12.0-beta.1",
   "main": "dist/index.js",
   "module": "dist/es/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "pretest": "npm run build",
     "test": "mocha",
-    "prebuild": "rm -rf dist && mkdir dist",
+    "prebuild": "rimraf dist && mkdir dist",
     "build": "npm run build:constants && npm run build:polyfills && npm run collect:polyfills && npm run build:bundlers",
     "build:bundlers": "tsc -p . && rollup -c",
     "build:polyfills": "node scripts/build-polyfills.js",
@@ -40,6 +40,7 @@
     "mocha": "^8.0.0",
     "np": "^7.6.2",
     "process-es6": "^0.11.6",
+    "rimraf": "^3.0.2",
     "rollup": "^3.2.2",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-json": "^4.0.0",
@@ -49,6 +50,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/FredKSchott/rollup-plugin-polyfill-node"
+    "url": "https://github.com/Immersiv/rollup-plugin-polyfill-node"
   }
 }
