@@ -21,7 +21,7 @@ const files = [
   'crypto.js'
 ];
 
-describe('rollup-plugin-node-polyfills', function() {
+describe('@rollup/plugin-node-polyfills', function() {
   
   this.timeout(5000);
 
